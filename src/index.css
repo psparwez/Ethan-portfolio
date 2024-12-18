@@ -1,3 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  font-family: "Sora", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply text-white bg-[#1d1d1d]  before:top-0 before:right-0  after:bottom-0 after:left-0 before:bg-primaryColor text-sm font-normal after:bg-primaryColor overflow-x-hidden py-0 px-10;
+  }
+  body::before,
+  body::after {
+    content: "";
+    position: fixed;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    -webkit-filter: blur(200px);
+    filter: blur(200px);
+    pointer-events: none;
+    z-index: -1;
+  }
+}
+
+.butn-presv {
+  -webkit-perspective: 500px;
+  perspective: 500px;
+  -webkit-transform: skewX(-7deg);
+  transform: skewX(-7deg);
+}
+
+.noise-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("./assets/noise-img.png");
+  background-size: auto !important;
+  background-repeat: repeat !important;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.bg-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+}

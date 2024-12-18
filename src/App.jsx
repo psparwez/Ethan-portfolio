@@ -1,5 +1,12 @@
+import Header from "./components/Header";
+
 const App = () => {
-  return <div className="text-3xl text-center ">App</div>;
+  return (
+    <>
+      <div className="noise-bg bg-img"></div>
+      <Header />
+    </>
+  );
 };
 
 export default App;
